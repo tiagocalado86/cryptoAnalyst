@@ -1,0 +1,12 @@
+<form method="POST" action="/crypto-analyzer/">
+  {% csrf_token %}
+  <label for="msg">Chat:</label><br>
+  <textarea id="msg" name="msg" rows="4" cols="50"></textarea><br><br>
+  <button type="submit">Send</button>
+  <br><br><br>
+  {% if msg %}
+    <h1>----------Awnser----------</h1>
+    <br>
+    <p>{{ msg }}</p>
+  {% endif %}
+</form>
